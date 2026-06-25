@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caça-Níquel — Fichas Fictícias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="maquina">
+    <h1>🎰 Caça-Níquel</h1>
+    <p class="aviso">Fichas fictícias — sem dinheiro real. Projeto de estudo.</p>
+
+    <div class="rolos">
+      <div class="rolo" id="rolo0">❓</div>
+      <div class="rolo" id="rolo1">❓</div>
+      <div class="rolo" id="rolo2">❓</div>
+    </div>
+
+    <p class="mensagem" id="mensagem">Faça sua aposta e gire!</p>
+
+    <div class="painel">
+      <div class="saldo">Saldo: <span id="saldo">100</span> 🪙</div>
+      <div class="aposta">
+        <button id="menos" aria-label="Diminuir aposta">−</button>
+        <span>Aposta: <span id="valorAposta">5</span></span>
+        <button id="mais" aria-label="Aumentar aposta">+</button>
+      </div>
+    </div>
+
+    <button class="girar" id="girar">GIRAR</button>
+    <button class="reset" id="reset">Resetar saldo</button>
+
+    <table class="tabela">
+      <caption>Tabela de pagamentos (3 símbolos iguais)</caption>
+      <tbody id="tabelaPagamentos"></tbody>
+    </table>
+
+    <p class="rtp" id="rtp"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
