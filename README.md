@@ -4,6 +4,8 @@ Segundo jogo do projeto de estudo. Tema **próprio** (não usa marca de terceiro
 inspirado nas mecânicas de slots populares: **Wild + multiplicador**.
 **Fichas fictícias, sem dinheiro real.**
 
+### ▶️ Jogue online: **https://open5987.github.io/cassino-slot/**
+
 > ⚠️ **Aviso legal:** projeto educacional com saldo fictício. Cassino com dinheiro real
 > no Brasil é atividade regulada (Lei 14.790/2023) e exige autorização federal. Hospedar
 > o servidor no exterior **não** torna legal atender jogadores brasileiros.
