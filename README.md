@@ -1,31 +1,38 @@
-# 🎰 cassino-slot — Caça-Níquel (fichas fictícias)
+# 🐉 Dragão da Sorte — caça-níquel temático (fichas fictícias)
 
-Primeiro jogo do projeto de estudo de cassino online. **Fichas fictícias, sem dinheiro real.**
+Segundo jogo do projeto de estudo. Tema **próprio** (não usa marca de terceiros),
+inspirado nas mecânicas de slots populares: **Wild + multiplicador**.
+**Fichas fictícias, sem dinheiro real.**
 
-> ⚠️ **Aviso legal:** este é um projeto educacional com saldo fictício. Cassino com
-> dinheiro real no Brasil é atividade regulada (Lei 14.790/2023) e exige autorização
-> federal. Nada aqui envolve aposta real.
+> ⚠️ **Aviso legal:** projeto educacional com saldo fictício. Cassino com dinheiro real
+> no Brasil é atividade regulada (Lei 14.790/2023) e exige autorização federal. Hospedar
+> o servidor no exterior **não** torna legal atender jogadores brasileiros.
 
 ## Como jogar
 
-Abra o arquivo `index.html` no navegador (duplo clique já funciona). Escolha a aposta,
-clique em **GIRAR** e tente alinhar 3 símbolos iguais.
+Abra `index.html` no navegador. Ajuste a aposta e clique em **GIRAR**. Alinhe 3 símbolos
+iguais na linha. O 🐉 (Dragão) é **Wild**: substitui qualquer símbolo e, quando participa
+de uma vitória, **multiplica** o prêmio (×2 por dragão). Três dragões = **jackpot**.
 
-## A matemática (o que dá pra aprender aqui)
+## Novidades em relação ao caça-níquel anterior
 
-- **RTP (Return to Player):** quanto o jogo devolve, em média, ao jogador.
-- **Vantagem da casa:** `100% − RTP`. É o que garante o lucro do cassino no longo prazo.
-- `simulacao_rtp.py` roda 5 milhões de giros e **prova** que o RTP real bate com o projetado.
+- 🐉 **Símbolo Wild** que substitui qualquer outro
+- ✖️ **Multiplicador** quando o dragão participa da vitória
+- ⚖️ **Rolos com pesos** (símbolos raros pagam mais) — como em slots de verdade
+- 🎞️ **Animação** de giro com parada sequencial (antecipação) e brilho na vitória
+
+## A matemática
+
+- **RTP ~94,7%** → **vantagem da casa ~5,3%**
+- `simulacao_rtp.py` calcula o RTP **exato** enumerando as 216 combinações e confere com
+  uma simulação de Monte Carlo de 2 milhões de giros.
 
 ```bash
 python simulacao_rtp.py
 ```
 
-Saída esperada: RTP em torno de **95,2%** (vantagem da casa ~4,8%).
+## ⚠️ Regra de ouro (limitação proposital)
 
-## ⚠️ Regra de ouro (e limitação desta versão)
-
-Nesta versão o **saldo e o sorteio ficam no navegador** (`localStorage` + `Math.random`).
-Isso é **inseguro de propósito** — qualquer um pode editar o saldo pelo F12. Está assim
-só para aprender. Num produto de verdade, **saldo e RNG vivem no servidor**, que é o
-único dono do dinheiro. Essa é a próxima fase do projeto.
+Saldo e sorteio vivem no **navegador** (`localStorage` + `Math.random`) — inseguro de
+propósito, só pra aprender. Num produto real, saldo e RNG vivem no **servidor**, dono
+único do dinheiro. Essa é a próxima fase.
