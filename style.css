@@ -2,78 +2,73 @@
 
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: radial-gradient(circle at top, #1b3a2b, #0b1a13);
-  color: #f5f5f5;
+  background: radial-gradient(circle at top, #6b0f1a, #1a0508);
+  color: #fff7e6;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display: flex; justify-content: center; align-items: flex-start;
   padding: 24px;
 }
 
 .maquina {
-  background: #14241c;
-  border: 3px solid #d4af37;
+  background: #210a0e;
+  border: 3px solid #e8b923;
   border-radius: 16px;
   padding: 24px;
-  width: 100%;
-  max-width: 420px;
+  width: 100%; max-width: 440px;
   text-align: center;
-  box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 50px rgba(232, 185, 35, 0.35);
 }
 
-h1 { font-size: 2rem; margin-bottom: 4px; }
-.aviso { font-size: 0.75rem; color: #93a5b1; margin-bottom: 16px; }
-
-.rolos {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-bottom: 16px;
+h1 {
+  font-size: 2rem; margin-bottom: 4px; color: #ffd84d;
+  text-shadow: 0 0 12px rgba(232, 185, 35, 0.5);
 }
+.aviso { font-size: 0.75rem; color: #d9a7ad; margin-bottom: 16px; }
+
+.rolos { display: flex; gap: 12px; justify-content: center; margin-bottom: 16px; }
 .rolo {
-  width: 90px; height: 90px;
-  background: #0b1410;
-  border: 2px solid #d4af37;
+  width: 100px; height: 100px;
+  background: #120406;
+  border: 2px solid #e8b923;
   border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 3rem;
+  font-size: 3.2rem;
+}
+.rolo.vitoria { animation: brilho 0.6s ease-in-out 3; }
+@keyframes brilho {
+  0%, 100% { box-shadow: 0 0 0 rgba(255, 216, 77, 0); border-color: #e8b923; }
+  50% { box-shadow: 0 0 24px rgba(255, 216, 77, 0.9); border-color: #fff; }
 }
 
-.mensagem { min-height: 1.4em; margin-bottom: 16px; font-weight: 600; }
+.mensagem { min-height: 1.4em; margin-bottom: 16px; font-weight: 700; color: #ffd84d; }
 
 .painel {
   display: flex; justify-content: space-between; align-items: center;
   flex-wrap: wrap; margin-bottom: 16px; gap: 12px;
 }
-.saldo { font-size: 1.1rem; font-weight: 700; color: #ffd700; }
+.saldo { font-size: 1.1rem; font-weight: 700; color: #ffd84d; }
 .aposta { display: flex; align-items: center; gap: 8px; }
 .aposta button {
   width: 32px; height: 32px; border-radius: 8px; border: none;
-  background: #d4af37; color: #14241c; font-size: 1.2rem; font-weight: 700;
-  cursor: pointer;
+  background: #e8b923; color: #210a0e; font-size: 1.2rem; font-weight: 700; cursor: pointer;
 }
 
 .girar {
-  width: 100%; padding: 16px; font-size: 1.3rem; font-weight: 800;
-  letter-spacing: 1px; border: none; border-radius: 12px; cursor: pointer;
-  background: linear-gradient(#e6c34d, #d4af37); color: #14241c;
-  margin-bottom: 8px;
+  width: 100%; padding: 16px; font-size: 1.3rem; font-weight: 800; letter-spacing: 1px;
+  border: none; border-radius: 12px; cursor: pointer;
+  background: linear-gradient(#ffd84d, #e8b923); color: #210a0e; margin-bottom: 8px;
 }
 .girar:active { transform: scale(0.98); }
 .girar:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .reset {
-  background: transparent; color: #93a5b1; border: 1px solid #3a4f44;
-  border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 0.8rem;
-  margin-bottom: 16px;
+  background: transparent; color: #d9a7ad; border: 1px solid #5a2128;
+  border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 0.8rem; margin-bottom: 16px;
 }
 
 .tabela { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
-.tabela caption { font-size: 0.8rem; color: #93a5b1; margin-bottom: 6px; }
-.tabela td {
-  border: 1px solid #2a3f34; padding: 6px 10px; font-size: 1rem;
-}
-.tabela td:last-child { color: #ffd700; font-weight: 700; text-align: right; }
+.tabela caption { font-size: 0.8rem; color: #d9a7ad; margin-bottom: 6px; }
+.tabela td { border: 1px solid #4a1820; padding: 6px 10px; font-size: 0.95rem; text-align: left; }
+.tabela td:last-child { color: #ffd84d; font-weight: 700; text-align: right; white-space: nowrap; }
 
-.rtp { font-size: 0.8rem; color: #93a5b1; }
+.rtp { font-size: 0.8rem; color: #d9a7ad; }
